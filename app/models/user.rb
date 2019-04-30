@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   has_many  :topics
   has_many  :favorites
-  # Userはfavorite_topicsとfavoritesを通してtopicを取得ができる\
+  # Userはfavorite_topicsにfavoritesを通してtopicを取得ができる\
   has_many  :favorite_topics, through: :favorites, source: 'topic'
 
   has_many  :comments

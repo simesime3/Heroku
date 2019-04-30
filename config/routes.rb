@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'favorites/index'
   post '/favorites', to: "favorites#create"
 
-  get 'comments/index'
+  get 'comments/new'
   post '/comments', to: "comments#create"
 
   get '/login', to: 'sessions#new'
