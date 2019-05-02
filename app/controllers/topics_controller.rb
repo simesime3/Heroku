@@ -3,6 +3,7 @@ class TopicsController < ApplicationController
     @topics = Topic.all.includes(:favorite_users)
     # @comments = Comment.all.includes(:comment_users)
     # binding.pry
+    # @heart_count = Topic.favorites.where(topic_id: :topic_id).count
   end
 
   def new
