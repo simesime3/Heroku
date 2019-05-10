@@ -71,3 +71,8 @@ gem "jquery-rails"
 gem 'bcrypt'
 gem "carrierwave"
 gem 'rmagick'
+
+group :production do
+  gem 'pg'
+end
+# gem "mysql2", group: :development
