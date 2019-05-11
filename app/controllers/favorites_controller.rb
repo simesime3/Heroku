@@ -4,11 +4,13 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    favorite = Favorite.new
-    favorite.user_id = current_user.id
-    favorite.topic_id = params[:topic_id]
+    # favorite = Favorite.new
+    # favorite.user_id = current_user.id
+    # favorite.topic_id = favorite_params[:topic_id]
+    favorite = Favorite.create(user_id: current_user.id,
+                               topic_id: favorite_params[:topic_id])
 
-    if favorite.save
+    if favorite
       redirect_to topics_path, success:'お気に入りに登録しました'
     else
       redirect_to topics_path, danger:'お気に入りに登録に失敗しました'
@@ -25,7 +27,7 @@ class FavoritesController < ApplicationController
   end
   private
   def favorite_params
-    params.require(:favorite).permit(:topic_id)
+    params.permit(:topic_id)
   end
 
 end

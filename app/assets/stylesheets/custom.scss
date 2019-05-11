@@ -108,7 +108,6 @@ h1, h2 {
 }
 
 .topic-index-wrapper{
-
   padding-top: 70px;
   background-color: #fafafa;
   .topic-index-single{
@@ -124,26 +123,26 @@ h1, h2 {
       padding-right: 20px;
       padding-left: 20px;
     }
-  .topic-text {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-  img {
-    margin-top:10px;
-    margin-bottom: 20px;
-    width: 100%;
-  }
-  .topic-index-icon {
-    width: 35px;
-    height: 30px;
-    margin-left: 20px;
-  }
-  .topic-index-iconred {
+    .topic-text {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    img {
+      margin-top:10px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    .topic-index-icon {
       width: 35px;
       height: 30px;
       margin-left: 20px;
-      background-color: #ff0000;
     }
+    .topic-index-iconred{
+        width: 35px;
+        height: 30px;
+        margin-left: 20px;
+        background-color: #ff0000;
+      }
   }
 }
 

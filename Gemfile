@@ -6,7 +6,11 @@ ruby '2.4.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# 開発環境(ローカル)ではSQLite3を使用
+gem 'sqlite3', group: :development
+
+# 本番環境(heroku)ではPostgreSQLを使用
+gem 'pg', group: :production
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -72,7 +76,7 @@ gem 'bcrypt'
 gem "carrierwave"
 gem 'rmagick'
 
-group :production do
-  gem 'pg'
-end
+# group :production do
+#   gem 'pg'
+# end
 # gem "mysql2", group: :development
