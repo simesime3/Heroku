@@ -2,7 +2,7 @@
   <div class="container">
     <% @topics.each do |topic| %>
       <div class="row">
-        <div class="col-md-6 col-md offset-3">
+        <div class="col-md-6 col-md-offset-3">
           <div class="topic-index-single">
             <h2 class="topic-author">
               <%= topic.user.name %>
@@ -15,7 +15,7 @@
               <% end %>
             <% else %>
               <%= link_to favorites_path(topic_id: topic.id), method: :delete do %>
-                <%= image_tag 'icons/heart-black.png', class: 'topic-index-iconred' %>
+                <%= image_tag 'icons/heart-red.gif', class: 'topic-index-icon' %>
               <% end %>
             <% end %>
             <%= link_to comments_new_path(topic_id: topic.id) do %>
